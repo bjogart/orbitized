@@ -2,10 +2,11 @@
   "name": "orbitized",
   "displayName": "Orbitized",
   "description": "Semantic shades supported by Solarized.",
+  "icon": "res/icon.png",
   "publisher": "bjogart",
   "license": "Apache",
   "repository": { "url": "https://github.com/bjogart/orbitized" },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": { "vscode": "^1.67.0" },
   "categories": [ "Themes" ],
   "contributes": {
