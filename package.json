@@ -1,0 +1,17 @@
+{
+  "name": "orbitized",
+  "displayName": "Orbitized",
+  "description": "Semantic shades supported by Solarized.",
+  "publisher": "bjogart",
+  "license": "MIT",
+  "repository": { "url": "https://github.com/bjogart/orbitized" },
+  "version": "1.0.0",
+  "engines": { "vscode": "^1.67.0" },
+  "categories": [ "Themes" ],
+  "contributes": {
+    "themes": [
+      { "label": "Orbitized Sol", "uiTheme": "vs", "path": "./themes/Orbitized Sol-color-theme.json" },
+      { "label": "Orbitized Luna", "uiTheme": "vs-dark", "path": "./themes/Orbitized Luna-color-theme.json" }
+    ]
+  }
+}

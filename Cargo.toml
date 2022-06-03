@@ -1,0 +1,9 @@
+[package]
+authors = ["Jasper van den Bogart <jasper.opti@gmail.com>"]
+edition = "2021"
+name = "orbitized"
+version = "1.0.0"
+
+[dependencies]
+mottle = "0.2.0"
+tincture = "0.5.0"
