@@ -20,10 +20,11 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
         p.bg,
     );
     b.add_workspace_rules(&["editor.foreground", "foreground"], p.fg);
+    b.add_workspace_rule("icon.foreground", p.sub_fg);
 
     b.add_workspace_rule("editor.lineHighlightBackground", p.em_bg);
 
-    b.add_workspace_rule("editor.selectionBackground", p.em_bg);
+    b.add_workspace_rules(&["editor.selectionBackground", "selection.background"], p.em_bg);
 
     b.add_workspace_rules(&["editorCursor.foreground", "terminalCursor.foreground"], p.em_fg);
     b.add_workspace_rules(&["editorCursor.background", "terminalCursor.background"], p.bg);
@@ -38,10 +39,33 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
         p.bg,
     );
 
+    b.add_workspace_rules(
+        &["statusBarItem.errorForeground", "statusBarItem.warningForeground"],
+        p.bg,
+    );
+    b.add_workspace_rule("statusBarItem.errorBackground", p.red);
+    b.add_workspace_rule("statusBarItem.warningBackground", p.orange);
+
+    b.add_workspace_rules(
+        &["badge.foreground", "activityBarBadge.foreground", "extensionBadge.remoteForeground"],
+        p.bg,
+    );
+    b.add_workspace_rules(
+        &["badge.background", "activityBarBadge.background", "extensionBadge.remoteBackground"],
+        p.magenta,
+    );
+
     b.add_workspace_rule("editorLineNumber.foreground", p.sub_fg);
     b.add_workspace_rule("editorLineNumber.activeForeground", p.fg);
 
     b.add_workspace_rule("editorWidget.background", p.bg);
+    b.add_workspace_rule("editorWidget.foreground", p.fg);
+
+    b.add_workspace_rule("input.foreground", p.fg);
+    b.add_workspace_rule("input.background", p.bg);
+    b.add_workspace_rule("input.placeholderForeground", p.sub_fg);
+    b.add_workspace_rule("inputOption.activeBackground", p.em_bg);
+    b.add_workspace_rule("inputOption.activeForeground", p.em_fg);
 
     b.add_workspace_rule("list.highlightForeground", p.em_fg);
     b.add_workspace_rules(&["list.focusBackground", "list.activeSelectionBackground"], p.em_bg);
@@ -54,6 +78,9 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
     b.add_workspace_rules(&["titleBar.activeBackground", "titleBar.inactiveBackground"], p.bg);
     b.add_workspace_rule("titleBar.activeForeground", p.fg);
     b.add_workspace_rule("titleBar.inactiveForeground", p.sub_fg);
+
+    b.add_workspace_rule("quickInputList.focusBackground", p.em_bg);
+    b.add_workspace_rule("quickInputList.focusForeground", p.em_fg);
 
     b.add_workspace_rule("breadcrumb.foreground", p.sub_fg);
     b.add_workspace_rule("breadcrumb.focusForeground", p.fg);
@@ -122,15 +149,6 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
     b.add_workspace_rule("diffEditor.removedTextBackground", with_alpha(p.red, 0x30));
     b.add_workspace_rule("diffEditor.insertedLineBackground", with_alpha(p.green, 0x20));
     b.add_workspace_rule("diffEditor.removedLineBackground", with_alpha(p.red, 0x20));
-
-    b.add_workspace_rules(
-        &["badge.foreground", "activityBarBadge.foreground", "extensionBadge.remoteForeground"],
-        p.em_bg,
-    );
-    b.add_workspace_rules(
-        &["badge.background", "activityBarBadge.background", "extensionBadge.remoteBackground"],
-        p.em_fg
-    );
 }
 
 fn syntax_highlighting(b: &mut ThemeBuilder, p: &Palette) {
