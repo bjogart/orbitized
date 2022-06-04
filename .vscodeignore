@@ -1,4 +1,10 @@
+.vscode/
+src/
+target/
+
+.gitignore
 Cargo.lock
 Cargo.toml
-src/
 rustfmt.toml
+
+*.afdesign
