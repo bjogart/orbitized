@@ -1,3 +1,4 @@
-/target
-/.vscode
+target/
+.vscode/
 res/icon.afdesign
+# themes/

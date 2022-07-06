@@ -22,12 +22,12 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
     b.add_workspace_rules(&["editor.foreground", "foreground"], p.fg);
     b.add_workspace_rule("icon.foreground", p.sub_fg);
 
-    b.add_workspace_rule("editor.lineHighlightBackground", p.em_bg);
+    b.add_workspace_rule("editor.lineHighlightBackground", p.bg);
 
     b.add_workspace_rules(&["editor.selectionBackground", "selection.background"], p.em_bg);
 
     b.add_workspace_rules(&["editorCursor.foreground", "terminalCursor.foreground"], p.em_fg);
-    b.add_workspace_rules(&["editorCursor.background", "terminalCursor.background"], p.bg);
+    b.add_workspace_rules(&["editorCursor.background", "terminalCursor.background"], p.em_bg);
 
     b.add_workspace_rules(&["activityBar.background", "sideBar.background"], p.bg);
     b.add_workspace_rule("activityBar.foreground", p.em_fg);
@@ -87,8 +87,7 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
         p.em_fg,
     );
 
-    b.add_workspace_rules(&["editorGroupHeader.tabsBackground", "tab.inactiveBackground"], p.bg);
-    b.add_workspace_rule("tab.activeBackground", p.em_bg);
+    b.add_workspace_rules(&["editorGroupHeader.tabsBackground", "tab.inactiveBackground", "tab.activeBackground"], p.bg);
     b.add_workspace_rule("tab.inactiveForeground", p.sub_fg);
     b.add_workspace_rule("tab.activeForeground", p.em_fg);
 
