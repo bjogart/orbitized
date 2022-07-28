@@ -72,11 +72,21 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
     b.add_workspace_rule("inputOption.activeForeground", p.em_fg);
 
     b.add_workspace_rules(
-        &["list.focusBackground", "list.activeSelectionBackground", "list.hoverBackground"],
+        &[
+            "list.focusBackground",
+            "list.activeSelectionBackground",
+            "list.inactiveSelectionBackground",
+            "list.hoverBackground",
+        ],
         p.em_bg,
     );
     b.add_workspace_rules(
-        &["list.focusForeground", "list.activeSelectionForeground", "list.hoverForeground"],
+        &[
+            "list.focusForeground",
+            "list.activeSelectionForeground",
+            "list.inactiveSelectionForeground",
+            "list.hoverForeground",
+        ],
         p.em_fg,
     );
     b.add_workspace_rule("list.errorForeground", p.red);
