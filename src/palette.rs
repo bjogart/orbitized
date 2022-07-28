@@ -1,10 +1,10 @@
 use mottle::style::Color;
 
 pub(crate) struct Palette {
-    pub bg: Color,
+    pub base_bg: Color,
     pub em_bg: Color,
     pub sub_fg: Color,
-    pub fg: Color,
+    pub base_fg: Color,
     pub em_fg: Color,
     pub yellow: Color,
     pub orange: Color,
@@ -36,10 +36,10 @@ impl Palette {
 
     pub fn luna() -> Self {
         Self {
-            bg: Self::BASE03,
+            base_bg: Self::BASE03,
             em_bg: Self::BASE02,
             sub_fg: Self::BASE01,
-            fg: Self::BASE0,
+            base_fg: Self::BASE0,
             em_fg: Self::BASE1,
             yellow: Self::YELLOW,
             orange: Self::ORANGE,
@@ -54,10 +54,10 @@ impl Palette {
 
     pub fn sol() -> Self {
         Self {
-            bg: Self::BASE3,
+            base_bg: Self::BASE3,
             em_bg: Self::BASE2,
             sub_fg: Self::BASE1,
-            fg: Self::BASE00,
+            base_fg: Self::BASE00,
             em_fg: Self::BASE01,
             yellow: Self::YELLOW,
             orange: Self::ORANGE,

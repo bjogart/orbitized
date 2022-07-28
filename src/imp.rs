@@ -17,38 +17,38 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
             "editorInlayHint.parameterBackground",
             "editorInlayHint.typeBackground",
         ],
-        p.bg,
+        p.base_bg,
     );
-    b.add_workspace_rules(&["editor.foreground", "foreground"], p.fg);
+    b.add_workspace_rules(&["editor.foreground", "foreground"], p.base_fg);
     b.add_workspace_rule("icon.foreground", p.sub_fg);
 
-    b.add_workspace_rule("editor.lineHighlightBackground", p.bg);
+    b.add_workspace_rule("editor.lineHighlightBackground", p.base_bg);
 
     b.add_workspace_rules(&["editor.selectionBackground", "selection.background"], p.em_bg);
 
     b.add_workspace_rules(&["editorCursor.foreground", "terminalCursor.foreground"], p.em_fg);
     b.add_workspace_rules(&["editorCursor.background", "terminalCursor.background"], p.em_bg);
 
-    b.add_workspace_rules(&["activityBar.background", "sideBar.background"], p.bg);
+    b.add_workspace_rules(&["activityBar.background", "sideBar.background"], p.base_bg);
     b.add_workspace_rule("activityBar.foreground", p.em_fg);
     b.add_workspace_rule("activityBar.inactiveForeground", p.sub_fg);
 
     b.add_workspace_rule("statusBar.foreground", p.sub_fg);
     b.add_workspace_rules(
         &["statusBar.background", "statusBar.debuggingBackground", "statusBar.noFolderBackground"],
-        p.bg,
+        p.base_bg,
     );
 
     b.add_workspace_rules(
         &["statusBarItem.errorForeground", "statusBarItem.warningForeground"],
-        p.bg,
+        p.base_bg,
     );
     b.add_workspace_rule("statusBarItem.errorBackground", p.red);
     b.add_workspace_rule("statusBarItem.warningBackground", p.orange);
 
     b.add_workspace_rules(
         &["badge.foreground", "activityBarBadge.foreground", "extensionBadge.remoteForeground"],
-        p.bg,
+        p.base_bg,
     );
     b.add_workspace_rules(
         &["badge.background", "activityBarBadge.background", "extensionBadge.remoteBackground"],
@@ -56,13 +56,13 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
     );
 
     b.add_workspace_rule("editorLineNumber.foreground", p.sub_fg);
-    b.add_workspace_rule("editorLineNumber.activeForeground", p.fg);
+    b.add_workspace_rule("editorLineNumber.activeForeground", p.base_fg);
 
-    b.add_workspace_rule("editorWidget.background", p.bg);
-    b.add_workspace_rule("editorWidget.foreground", p.fg);
+    b.add_workspace_rule("editorWidget.background", p.base_bg);
+    b.add_workspace_rule("editorWidget.foreground", p.base_fg);
 
-    b.add_workspace_rule("input.foreground", p.fg);
-    b.add_workspace_rule("input.background", p.bg);
+    b.add_workspace_rule("input.foreground", p.base_fg);
+    b.add_workspace_rule("input.background", p.base_bg);
     b.add_workspace_rule("input.placeholderForeground", p.sub_fg);
     b.add_workspace_rule("inputOption.activeBackground", p.em_bg);
     b.add_workspace_rule("inputOption.activeForeground", p.em_fg);
@@ -87,21 +87,21 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
         p.em_fg,
     );
 
-    b.add_workspace_rules(&["editorGroupHeader.tabsBackground", "tab.inactiveBackground", "tab.activeBackground"], p.bg);
+    b.add_workspace_rules(&["editorGroupHeader.tabsBackground", "tab.inactiveBackground", "tab.activeBackground"], p.base_bg);
     b.add_workspace_rule("tab.inactiveForeground", p.sub_fg);
     b.add_workspace_rule("tab.activeForeground", p.em_fg);
 
-    b.add_workspace_rules(&["titleBar.activeBackground", "titleBar.inactiveBackground"], p.bg);
-    b.add_workspace_rule("titleBar.activeForeground", p.fg);
+    b.add_workspace_rules(&["titleBar.activeBackground", "titleBar.inactiveBackground"], p.base_bg);
+    b.add_workspace_rule("titleBar.activeForeground", p.base_fg);
     b.add_workspace_rule("titleBar.inactiveForeground", p.sub_fg);
 
     b.add_workspace_rule("quickInputList.focusBackground", p.em_bg);
     b.add_workspace_rule("quickInputList.focusForeground", p.em_fg);
 
     b.add_workspace_rule("breadcrumb.foreground", p.sub_fg);
-    b.add_workspace_rule("breadcrumb.focusForeground", p.fg);
+    b.add_workspace_rule("breadcrumb.focusForeground", p.base_fg);
 
-    b.add_workspace_rule("terminal.foreground", p.fg);
+    b.add_workspace_rule("terminal.foreground", p.base_fg);
     b.add_workspace_rule("terminal.ansiBlack", p.em_bg);
     b.add_workspace_rule("terminal.ansiRed", p.red);
     b.add_workspace_rule("terminal.ansiGreen", p.green);
@@ -135,7 +135,7 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
             "editorInlayHint.parameterBackground",
             "editorInlayHint.typeBackground",
         ],
-        with_alpha(p.bg, 0x00),
+        with_alpha(p.base_bg, 0x00),
     );
 
     b.add_workspace_rule("errorLens.hintBackground", with_alpha(p.cyan, 0x20));
@@ -284,7 +284,7 @@ fn syntax_highlighting(b: &mut ThemeBuilder, p: &Palette) {
             Textmate("comment.block.documentation"),
             Textmate("comment.block.javadoc"),
         ],
-        (p.fg, FontStyle::Italic),
+        (p.base_fg, FontStyle::Italic),
     );
 
     b.add_rules(
@@ -297,7 +297,7 @@ fn syntax_highlighting(b: &mut ThemeBuilder, p: &Palette) {
         p.sub_fg,
     );
 
-    b.add_rule(Textmate("keyword.operator"), p.fg);
+    b.add_rule(Textmate("keyword.operator"), p.base_fg);
 
     b.add_rule(Semantic("unresolvedReference"), p.red);
 
