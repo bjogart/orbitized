@@ -22,9 +22,12 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
     b.add_workspace_rules(&["editor.foreground", "foreground"], p.base_fg);
     b.add_workspace_rule("icon.foreground", p.sub_fg);
 
-    b.add_workspace_rule("editor.lineHighlightBackground", p.base_bg);
+    b.add_workspace_rule("editor.lineHighlightBackground", p.em_bg);
 
     b.add_workspace_rules(&["editor.selectionBackground", "selection.background"], p.em_bg);
+    b.add_workspace_rule("editor.selectionForeground", p.em_fg);
+    b.add_workspace_rule("editor.selectionHighlightBackground", p.base_bg);
+    b.add_workspace_rule("editor.selectionHighlightBorder", p.sub_fg);
 
     b.add_workspace_rules(&["editorCursor.foreground", "terminalCursor.foreground"], p.em_fg);
     b.add_workspace_rules(&["editorCursor.background", "terminalCursor.background"], p.em_bg);
