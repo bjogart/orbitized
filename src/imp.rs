@@ -91,8 +91,12 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
         p.em_fg,
     );
 
-    b.add_workspace_rules(&["editorGroupHeader.tabsBackground", "tab.inactiveBackground", "tab.activeBackground"], p.base_bg);
+    b.add_workspace_rule("editorGroupHeader.tabsBackground", p.base_bg);
+
+    b.add_workspace_rule("tab.inactiveBackground", p.base_bg);
     b.add_workspace_rule("tab.inactiveForeground", p.sub_fg);
+
+    b.add_workspace_rule("tab.activeBackground", p.em_bg);
     b.add_workspace_rule("tab.activeForeground", p.em_fg);
 
     b.add_workspace_rules(&["titleBar.activeBackground", "titleBar.inactiveBackground"], p.base_bg);
