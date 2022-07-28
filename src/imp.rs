@@ -152,12 +152,12 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
         p.yellow,
     );
 
-    b.add_workspace_rule("editorBracketHighlight.foreground1", p.yellow);
-    b.add_workspace_rule("editorBracketHighlight.foreground2", p.magenta);
-    b.add_workspace_rule("editorBracketHighlight.foreground3", p.cyan);
-    b.add_workspace_rule("editorBracketHighlight.foreground4", p.violet);
-    b.add_workspace_rule("editorBracketHighlight.foreground5", p.green);
-    b.add_workspace_rule("editorBracketHighlight.foreground6", p.blue);
+    b.add_workspace_rule("editorBracketHighlight.foreground1", p.blue);
+    b.add_workspace_rule("editorBracketHighlight.foreground2", p.green);
+    b.add_workspace_rule("editorBracketHighlight.foreground3", p.violet);
+    b.add_workspace_rule("editorBracketHighlight.foreground4", p.cyan);
+    b.add_workspace_rule("editorBracketHighlight.foreground5", p.yellow);
+    b.add_workspace_rule("editorBracketHighlight.foreground6", p.magenta);
 
     b.add_workspace_rule("editorBracketHighlight.unexpectedBracket.foreground", p.red);
 
