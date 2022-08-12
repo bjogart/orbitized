@@ -69,7 +69,7 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
         p.base_bg,
     );
     b.add_workspace_rule("statusBarItem.errorBackground", p.red);
-    b.add_workspace_rule("statusBarItem.warningBackground", p.orange);
+    b.add_workspace_rule("statusBarItem.warningBackground", p.yellow);
 
     b.add_workspace_rules(
         &["badge.foreground", "activityBarBadge.foreground", "extensionBadge.remoteForeground"],
@@ -111,7 +111,7 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
         p.em_fg,
     );
     b.add_workspace_rule("list.errorForeground", p.red);
-    b.add_workspace_rule("list.warningForeground", p.orange);
+    b.add_workspace_rule("list.warningForeground", p.yellow);
 
     b.add_workspace_rule("editorGroupHeader.tabsBackground", p.base_bg);
 
@@ -171,8 +171,8 @@ fn workspace_colors(b: &mut ThemeBuilder, p: &Palette) {
     b.add_workspace_rule("errorLens.hintForeground", p.cyan);
     b.add_workspace_rule("errorLens.infoBackground", with_alpha(p.green, 0x20));
     b.add_workspace_rule("errorLens.infoForeground", p.green);
-    b.add_workspace_rule("errorLens.warningBackground", with_alpha(p.orange, 0x20));
-    b.add_workspace_rule("errorLens.warningForeground", p.orange);
+    b.add_workspace_rule("errorLens.warningBackground", with_alpha(p.yellow, 0x20));
+    b.add_workspace_rule("errorLens.warningForeground", p.yellow);
     b.add_workspace_rule("errorLens.errorBackground", with_alpha(p.red, 0x20));
     b.add_workspace_rule("errorLens.errorForeground", p.red);
 
