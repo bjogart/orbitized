@@ -232,6 +232,7 @@ fn syntax_highlighting(b: &mut ThemeBuilder, p: &Palette) {
             Textmate("storage.type.rune.go"),
             Textmate("storage.type.string.go"),
             Textmate("storage.type.uintptr.go"),
+            Semantic("typeParameter"),
         ],
         p.yellow,
     );
@@ -239,7 +240,6 @@ fn syntax_highlighting(b: &mut ThemeBuilder, p: &Palette) {
         &[
             Semantic("interface"),
             Semantic("typeAlias.trait"),
-            Semantic("typeParameter"),
             Textmate("entity.name.type.interface"),
             Textmate("entity.name.type.type-parameter"),
         ],
